@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,82 +6,75 @@
   <link rel="stylesheet" href="jumi.css">
 </head>
 <body>
-
   <header>
     <div class="logo">
+      <img src="CRUZ.png" alt="Cruz" class="cruz-icon">
       <h1>Bienvenido a Jumi</h1>
       <p>Un espacio para encontrar paz, amor y unidad en Dios.</p>
-      <p><strong>¿Que es la jumi?</strong></p>
-      <details>La jumi es un grupo catolico formado en 2015, La jumi es un grupo donde puedes convivir con mas Jovenes de muchas edades,un grupo en el que te puedes acercar a dios.  </details>
     </div>
-  </header>
-
-  <!-- Miembros del Grupo (ahora al principio) -->
-  <section id="miembros">
+  </header>  <nav class="main-nav">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Sobre Nosotros</a></li>
+      <li><a href="#informacion">Información</a></li>
+      <li><a href="#miembros">Miembros</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+  </nav>  <section id="inicio" class="seccion">
+    <h2>Inicio</h2>
+    <p>Bienvenido al sitio oficial de Jumi. Un espacio para crecer en la fe y compartir con otros jóvenes, Unete a nuestro grupo de WhatsApp y se parte de este maravilloso grupo.</p>
+  </section>  <section id="nosotros" class="seccion">
+    <h2>Sobre Nosotros</h2>
+    <p>Bienvenid@s, La jumi es un grupo catolico para enseñar sobre Dios. Todos los jovenes que se quieran unir al grupo Jumi son Bienvenidos.</p>
+  </section>  <section id="informacion" class="seccion">
+    <h2>Información</h2>
+    <p>Horario: 3pm hasta 5pm, un grupo catolico, edad minima requerida 15 años</p>
+  </section>  <section id="miembros" class="seccion">
     <h2>Miembros de Jumi</h2>
-    <div class="members-carousel">
-      <ul class="members-list">
-     <li>Steven</li>
-        <li>Daniel</li>
-        <li>Oscar</li>
-        <li>Kenia</li>
-        <li>Valentin</li>
-        <li>Rudy</li>
-        <li> Angel </li>
-        <li>Kevin</li>
-        <li>Natalia</li>
-        <li>Jaime</li>
-        <li>Marvin</li>
-        <li>Gissela</li>
-        <li>Michael</li>
-        <li>Franklin</li>
-        <li>Mauricio </li>
-        <li>Katty</li>
-        <li>Jasmin</li>
-       
-      </ul>
-    </div>
-  </section>
-
-  <!-- Botón para mostrar álbum -->
-  <section id="ver-album">
+    <ul class="members-list">
+      <li>Steven</li>
+      <li>Daniel</li>
+      <li>Oscar</li>
+      <li>Kenia</li>
+      <li>Valentin</li>
+      <li>Rudy</li>
+      <li>Angel</li>
+      <li>Kevin</li>
+      <li>Natalia</li>
+      <li>Jaime</li>
+      <li>Marvin</li>
+      <li>Gissela</li>
+      <li>Michael</li>
+      <li>Franklin</li>
+      <li>Mauricio</li>
+      <li>Katty</li>
+      <li>Jasmin</li>
+    </ul>
+  </section>  <section id="ver-album" class="seccion">
     <div class="center-btn">
       <button onclick="mostrarAlbum()" class="album-btn">Ver Álbum</button>
     </div>
-  </section>
-
-  <!-- Sección Jumi Album (oculta por defecto) -->
-  <section id="album" style="display: none;">
+  </section>  <section id="album" class="seccion" style="display: none;">
     <h2>Jumi Album</h2>
     <div class="gallery">
-      <div class="image-container">
-        <img src="JUMI.jpg" alt="Imagen 1">
-      </div>
-      <div class="image-container">
-        <img src="JUIMI1.jpg" alt="Imagen 2">
-      </div>
-      <div class="image-container">
-        <img src="jumi2.jpg" alt="Imagen 3">
-      </div>
+      <div class="image-container"><img src="img/JUMI.jpg" alt="Imagen 1"></div>
+      <div class="image-container"><img src="img/JUIMI1.jpg" alt="Imagen 2"></div>
+      <div class="image-container"><img src="img/jumi2.jpg" alt="Imagen 3"></div>
     </div>
-  </section>
-
-  <!-- Botón de Unirse (abajo, gris y al lado) -->
-  <section id="unirse">
+  </section>  <section id="ubicacion" class="seccion">
+    <h2>Ubicación</h2>
+    <p>
+      <a href="https://www.google.pl/maps/place/Iglesia+Cat%C3%B3lica+Colonia+San+Francisco+Guajoyo/@14.2237766,-89.4936672,17.87z/data=!4m6!3m5!1s0x8f62f99c6fdfcd11:0x7e6c2b43ea8762c3!8m2!3d14.2230236!4d-89.4947587!16s%2Fg%2F11rfbz136q?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="ubicacion-link">Ver en Google Maps</a>
+    </p>
+  </section>  <section id="unirse" class="seccion">
     <a href="https://chat.whatsapp.com/ESSHGBp9ogjKUSEXZuPrMT" class="whatsapp-btn" target="_blank">
-      Unirse al Grupo
+      <img src="paloma.png" alt="Paloma" class="icono-btn"> Unirse al Grupo
     </a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Jumi | Hecha Por Angel</p>
-  </footer>
-
-  <script>
+  </section>  <footer>
+    <p>&copy; 2025 Jumi | Hecha con fe por Angel</p>
+  </footer>  <script>
     function mostrarAlbum() {
-      const album = document.getElementById('album');
-      album.style.display = 'block';
+      document.getElementById('album').style.display = 'block';
     }
-  </script>
-</body>
+  </script></body>
 </html>
