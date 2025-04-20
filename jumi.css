@@ -78,6 +78,43 @@
     background-color: #e0e0e0;
     border-radius: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+
+  .members-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  .members-list {
+    display: inline-flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .members-list li {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+  }
+
+  .members-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .members-list li {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 8px;
   }
   
   .members-list li:hover {
