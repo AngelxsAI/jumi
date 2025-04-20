@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumi - Grupo Católico</title>
+  <link rel="stylesheet" href="jumi.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Bienvenido a Jumi</h1>
+      <p>Un espacio para encontrar paz, amor y unidad en Dios.</p>
+    </div>
+  </header>
+
+  <!-- Miembros del Grupo (ahora al principio) -->
+  <section id="miembros">
+    <h2>Miembros de Jumi</h2>
+    <div class="members-carousel">
+      <ul class="members-list">
+        <li>Angel</li>
+        <li>Gissela</li>
+        <li>Rudy Rodriguez </li>
+        <li>Steven Nova</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Botón para mostrar álbum -->
+  <section id="ver-album">
+    <div class="center-btn">
+      <button onclick="mostrarAlbum()" class="album-btn">Ver Álbum</button>
+    </div>
+  </section>
+
+  <!-- Sección Jumi Album (oculta por defecto) -->
+  <section id="album" style="display: none;">
+    <h2>Jumi Album</h2>
+    <div class="gallery">
+      <div class="image-container">
+        <img src="img1.jpg" alt="Imagen 1">
+      </div>
+      <div class="image-container">
+        <img src="img2.jpg" alt="Imagen 2">
+      </div>
+      <div class="image-container">
+        <img src="img3.jpg" alt="Imagen 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón de Unirse (abajo, gris y al lado) -->
+  <section id="unirse">
+    <a href="Inabilitado" class="whatsapp-btn" target="_blank">
+      Unirse al Grupo
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jumi | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function mostrarAlbum() {
+      const album = document.getElementById('album');
+      album.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
