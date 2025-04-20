@@ -1,229 +1,54 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-  
-  /* Header */
-  header {
-    background: #f0b27a;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    animation: fadeIn 2s ease-out;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* Miembros */
-  #miembros {
-    padding: 40px 20px;
-    background-color: #f0f0f0;
-    text-align: center;
-  }
-  
-  #miembros h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #444;
-  }
-  
-  .members-carousel {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .members-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: nowrap;
-    font-size: 1.2rem;
-    color: #333;
-    animation: scrollMembers 10s linear infinite;
-  }
-  
-  @keyframes scrollMembers {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  .members-list li {
-    padding: 10px 20px;
-    background-color: #e0e0e0;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Reset y estilo base */
 
-  }
+{ margin: 0; padding: 0; box-sizing: border-box; }
 
-  .members-carousel {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px;
-  }
-  
-  .members-list {
-    display: inline-flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .members-list li {
-    background-color: #f0f0f0;
-    padding: 8px 15px;
-    border-radius: 8px;
-    flex: 0 0 auto;
-  }
 
-  .members-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
-    justify-content: center;
-  }
-  
-  .members-list li {
-    background-color: #f0f0f0;
-    padding: 8px 15px;
-    border-radius: 8px;
-  }
-  
-  .members-list li:hover {
-    background-color: #f0b27a;
-    transform: translateY(-5px);
-  }
-  
-  /* Botón Ver Álbum */
-  .center-btn {
-    text-align: center;
-    margin: 30px 0;
-  }
-  
-  .album-btn {
-    padding: 12px 25px;
-    background-color: #f0b27a;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .album-btn:hover {
-    background-color: #e59866;
-  }
-  
-  /* Álbum */
-  #album {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  #album h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #555;
-    animation: fadeInUp 1s ease-out;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .image-container {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .image-container img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Botón Unirse (al final) */
-  #unirse {
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 20px;
-  }
-  
-  .whatsapp-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #888;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .whatsapp-btn:hover {
-    background-color: #666;
-    transform: scale(1.05);
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 40px;
-    animation: fadeIn 2s ease-out;
-  }
+body { font-family: 'Georgia', serif; background: linear-gradient(to bottom, #fffaf0, #f0e6d2); color: #333; line-height: 1.6; overflow-x: hidden; }
+
+header { background: #a27b5c; color: white; text-align: center; padding: 40px 20px; position: relative; }
+
+.cruz-icon { width: 60px; position: absolute; left: 20px; top: 20px; }
+
+nav.main-nav { background-color: #d1bfa7; text-align: center; padding: 15px; }
+
+nav.main-nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+
+nav.main-nav a { text-decoration: none; color: #5c3d2e; font-weight: bold; transition: color 0.3s; }
+
+nav.main-nav a:hover { color: #a27b5c; }
+
+.seccion { padding: 50px 20px; text-align: center; }
+
+h2 { font-size: 2.5rem; color: #5c3d2e; margin-bottom: 20px; }
+
+.members-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+
+.members-list li { background-color: #e8d8c3; padding: 10px 20px; border-radius: 12px; transition: background-color 0.3s, transform 0.3s; }
+
+.members-list li:hover { background-color: #d1bfa7; transform: scale(1.05); }
+
+.center-btn { margin: 30px 0; text-align: center; }
+
+.album-btn { padding: 12px 30px; background-color: #a27b5c; color: white; font-size: 1.1rem; border: none; border-radius: 25px; cursor: pointer; transition: background-color 0.3s; }
+
+.album-btn:hover { background-color: #8f6244; }
+
+.gallery { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+.image-container { width: 280px; height: 280px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+.image-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+
+.image-container img:hover { transform: scale(1.1); }
+
+.ubicacion-link { display: inline-block; padding: 10px 25px; background-color: #a27b5c; color: white; border-radius: 20px; text-decoration: none; transition: background-color 0.3s; }
+
+.ubicacion-link:hover { background-color: #8f6244; }
+
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background-color: #888; color: white; padding: 12px 25px; font-weight: bold; border-radius: 30px; text-decoration: none; transition: background-color 0.3s, transform 0.3s; }
+
+.whatsapp-btn:hover { background-color: #666; transform: scale(1.05); }
+
+.icono-btn { width: 25px; height: 25px; }
+
+footer { text-align: center; padding: 20px; background-color: #5c3d2e; color: white; margin-top: 40px; font-size: 0.9rem; }
