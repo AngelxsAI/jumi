@@ -79,3 +79,8 @@ footer { text-align: center; padding: 20px; background-color: #5c3d2e; color: wh
   transform: scale(1.05);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
