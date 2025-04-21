@@ -79,31 +79,3 @@ footer { text-align: center; padding: 20px; background-color: #5c3d2e; color: wh
   transform: scale(1.05);
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f5f2;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background-color: #4a7c59;
-  color: white;
-  padding: 30px;
-  text-align: center;
-}
-
-.calendar-section {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-footer {
-  text-align: center;
-  background-color: #4a7c59;
-  color: white;
-  padding: 15px;
-  margin-top: 30px;
-}
