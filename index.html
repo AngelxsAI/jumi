@@ -20,6 +20,87 @@
       <li><a href="#miembros">Miembros</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
     </ul>
+
+    <div id="versiculo-del-dia" style="text-align:center; font-size:1.2rem; padding:20px;"></div>
+
+<script>
+  const versiculos = [
+    "Juan 3:16 - Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito...",
+    "Salmos 23:1 - El Señor es mi pastor, nada me faltará.",
+    "Filipenses 4:13 - Todo lo puedo en Cristo que me fortalece.",
+    "Jeremías 29:11 - Porque yo sé los planes que tengo para ustedes, declara el Señor...",
+    "Isaías 41:10 - No temas, porque yo estoy contigo...",
+    "Proverbios 3:5 - Confía en el Señor con todo tu corazón...",
+    "Mateo 5:14 - Vosotros sois la luz del mundo...",
+    "Romanos 8:28 - Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien.",
+    "Salmos 46:1 - Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones.",
+    "Isaías 40:31 - Pero los que esperan a Jehová tendrán nuevas fuerzas...",
+    "Mateo 6:33 - Mas buscad primeramente el reino de Dios y su justicia...",
+    "Salmos 119:105 - Lámpara es a mis pies tu palabra, y lumbrera a mi camino.",
+    "Josué 1:9 - Sé fuerte y valiente. No temas ni te desalientes...",
+    "Hebreos 11:1 - La fe es la certeza de lo que se espera...",
+    "1 Corintios 13:13 - Y ahora permanecen la fe, la esperanza y el amor...",
+    "Efesios 6:11 - Vestíos de toda la armadura de Dios...",
+    "Mateo 11:28 - Venid a mí todos los que estáis trabajados y cargados...",
+    "2 Timoteo 1:7 - Porque no nos ha dado Dios espíritu de cobardía...",
+    "Salmos 37:4 - Deléitate asimismo en Jehová, y él te concederá las peticiones de tu corazón.",
+    "Romanos 12:2 - No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento...",
+    "1 Pedro 5:7 - Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.",
+    "Gálatas 5:22 - Mas el fruto del Espíritu es amor, gozo, paz...",
+    "Colosenses 3:23 - Y todo lo que hagáis, hacedlo de corazón, como para el Señor...",
+    "Santiago 1:5 - Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios...",
+    "Salmos 34:8 - Gustad, y ved que es bueno Jehová...",
+    "Apocalipsis 3:20 - He aquí, yo estoy a la puerta y llamo...",
+    "Juan 14:6 - Yo soy el camino, la verdad y la vida...",
+    "Salmos 27:1 - Jehová es mi luz y mi salvación, ¿de quién temeré?",
+    "Mateo 5:9 - Bienaventurados los pacificadores, porque ellos serán llamados hijos de Dios.",
+    "Romanos 10:9 - Que si confesares con tu boca que Jesús es el Señor...",
+    "Salmos 51:10 - Crea en mí, oh Dios, un corazón limpio...",
+    "1 Juan 4:19 - Nosotros le amamos a él, porque él nos amó primero.",
+    "Proverbios 18:10 - Torre fuerte es el nombre de Jehová...",
+    "Isaías 26:3 - Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera...",
+    "Lucas 1:37 - Porque nada hay imposible para Dios.",
+    "Romanos 6:23 - Porque la paga del pecado es muerte...",
+    "Salmos 121:1-2 - Alzaré mis ojos a los montes...",
+    "Hechos 4:12 - Y en ningún otro hay salvación...",
+    "Sofonías 3:17 - Jehová está en medio de ti, poderoso...",
+    "Éxodo 14:14 - Jehová peleará por vosotros, y vosotros estaréis tranquilos.",
+    "Juan 8:12 - Yo soy la luz del mundo...",
+    "Isaías 43:2 - Cuando pases por las aguas, yo estaré contigo...",
+    "Proverbios 16:3 - Encomienda a Jehová tus obras...",
+    "2 Corintios 5:7 - Porque por fe andamos, no por vista.",
+    "Salmos 19:14 - Sean gratos los dichos de mi boca...",
+    "1 Corintios 10:13 - No os ha sobrevenido ninguna tentación que no sea humana...",
+    "Deuteronomio 31:6 - Esforzaos y cobrad ánimo...",
+    "Romanos 5:8 - Mas Dios muestra su amor para con nosotros...",
+    "Hebreos 13:8 - Jesucristo es el mismo ayer, hoy y por los siglos.",
+    "1 Tesalonicenses 5:16-18 - Estad siempre gozosos. Orad sin cesar...",
+    "Isaías 55:8-9 - Porque mis pensamientos no son vuestros pensamientos...",
+    "Salmos 100:5 - Porque Jehová es bueno; para siempre es su misericordia...",
+    "Juan 15:13 - Nadie tiene mayor amor que este...",
+    "Proverbios 4:23 - Sobre toda cosa guardada, guarda tu corazón...",
+    "Hebreos 4:12 - Porque la palabra de Dios es viva y eficaz...",
+    "Miqueas 6:8 - ¿Qué pide Jehová de ti? Solamente hacer justicia...",
+    "Salmos 30:5 - Por la noche durará el lloro, y a la mañana vendrá la alegría.",
+    "Romanos 8:38-39 - Nada nos podrá separar del amor de Dios...",
+    "Mateo 28:19 - Id, y haced discípulos a todas las naciones...",
+    "Juan 1:5 - La luz en las tinieblas resplandece...",
+    "Salmos 91:1 - El que habita al abrigo del Altísimo...",
+    "Isaías 40:8 - Sécase la hierba, marchítase la flor...",
+    "1 Juan 1:9 - Si confesamos nuestros pecados...",
+    "Mateo 22:37 - Amarás al Señor tu Dios con todo tu corazón..."
+  ];
+
+  function obtenerVersiculoDelDia() {
+    const hoy = new Date();
+    const diaDelAño = Math.floor((hoy - new Date(hoy.getFullYear(), 0, 0)) / 86400000);
+    const index = diaDelAño % versiculos.length;
+    return versiculos[index];
+  }
+
+  document.getElementById("versiculo-del-dia").textContent = obtenerVersiculoDelDia();
+</script>
+    
   </nav>  <section id="inicio" class="seccion">
     <h2>Inicio</h2>
     <p>Bienvenido al sitio oficial de Jumi. Un espacio para crecer en la fe y compartir con otros jóvenes, Unete a nuestro grupo de WhatsApp y se parte de este maravilloso grupo.</p>
