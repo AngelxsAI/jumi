@@ -69,18 +69,50 @@
       </div>
     </section>
 
-    <section class="calendar-section">
-      <h2>Calendario de Eventos</h2>
-      <iframe 
-        src="https://calendar.google.com/calendar/embed?src=8bf36b5b88e056fd52aee2ee97d1503b2d1fda335e319581bfd7ffecfca1b426%40group.calendar.google.com&ctz=America%2FEl_Salvador"
-        style="border: 0"
-        width="100%"
-        height="600"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen>
-      </iframe>
-    </section>
+    <section id="eventos" class="seccion">
+  <h2>📅 Próximos eventos de JUMI</h2>
+  <ul id="lista-eventos" class="event-list" style="font-size: 1.1rem; line-height: 1.6;"></ul>
+</section>
+
+<script>
+  const calendarId = "8bf36b5b88e056fd52aee2ee97d1503b2d1fda335e319581bfd7ffecfca1b426@group.calendar.google.com";
+  const apiKey = "AIzaSyAjVLBN0XDvQcqQf9RMvkO9hbqgsgW0nqo";
+  const maxResults = 5; // Cambia si quieres más o menos eventos
+
+  async function cargarEventos() {
+    const timeMin = new Date().toISOString();
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${apiKey}&timeMin=${timeMin}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const lista = document.getElementById("lista-eventos");
+
+      if (!data.items || data.items.length === 0) {
+        lista.innerHTML = "<li>No hay eventos próximos.</li>";
+        return;
+      }
+
+      lista.innerHTML = ""; // Limpiar lista anterior
+
+      data.items.forEach(evento => {
+        const fecha = new Date(evento.start.dateTime || evento.start.date);
+        const opciones = { weekday: "long", day: "numeric", month: "long" };
+        const fechaTexto = fecha.toLocaleDateString("es-ES", opciones);
+        const li = document.createElement("li");
+        li.innerHTML = `📌 <strong>${fechaTexto}:</strong> ${evento.summary || "Sin título"}`;
+        lista.appendChild(li);
+      });
+
+    } catch (error) {
+      console.error("Error al cargar eventos del calendario:", error);
+      document.getElementById("lista-eventos").innerHTML = "<li>Hubo un problema al cargar los eventos.</li>";
+    }
+  }
+
+  cargarEventos();
+</script>
+
 
     <section id="ubicacion" class="seccion">
       <h2>Ubicación</h2>
