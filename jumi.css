@@ -527,3 +527,15 @@ footer {
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   }
 }
+
+
+header {
+  /* Quitar el position sticky si está activado */
+  position: relative;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
