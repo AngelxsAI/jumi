@@ -167,11 +167,11 @@
   
       <section class="download-section section">
         <h2><i class="fas fa-bible"></i> Recursos Espirituales</h2>
-        <p>Descarga la Biblia y otros materiales para tu crecimiento espiritual</p>
+      
         
         <div class="download-card">
           <h3>Santa Biblia - Versión Reina Valera</h3>
-          <p>Texto completo de la Biblia en formato PDF para tu estudio personal</p>
+          
           
           <button onclick="window.open('https://www.bible.com/es/versions/149-rvr1960-biblia-reina-valera-1960', '_blank')" style="background-color: var(--primary); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow);">
             <i class="fas fa-book"></i> Leer Santa Biblia
@@ -182,7 +182,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
           <div style="background-color: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; backdrop-filter: blur(5px);">
             <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-mobile-alt"></i> App Santa Biblia</h3>
-            <p style="margin-bottom: 1rem;">Lleva la Santa Biblia siempre contigo en tu dispositivo móvil</p>
+            <p style="margin-bottom: 1rem;"></p>
             
             <div style="display: flex; gap: 1rem; justify-content: center;">
               <!-- Redirigir al enlace directo de la app si está instalada -->
@@ -197,7 +197,7 @@
           
           <div style="background-color: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; backdrop-filter: blur(5px);">
             <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-book-open"></i> Catecismo</h3>
-            <p style="margin-bottom: 1rem;">Documento completo del Catecismo de la Iglesia Católica</p>
+            <p style="margin-bottom: 1rem;"></p>
             <button onclick="window.open('https://www.vatican.va/archive/catechism_sp/index_sp.html', '_blank')" style="background-color: var(--accent); color: var(--dark); border: none; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: 600; cursor: pointer; width: 100%;">
               <i class="fas fa-download"></i> Leer
             </button>
@@ -205,57 +205,58 @@
         </div>
       </section>
       
-     <section class="section" style="text-align: center;">
-  <h2><i class="fas fa-praying-hands"></i> Oración Comunitaria</h2>
-  <p style="max-width: 800px; margin: 0 auto 1.5rem;">"La oración es el oxígeno del alma" - San Pío de Pietrelcina</p>
-
-  <div id="oracion-box" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: var(--shadow);">
-    <h3 style="color: var(--primary); margin-bottom: 1rem;">Oración por las necesidades del grupo</h3>
-    <p id="oracion-text" style="font-style: italic; margin-bottom: 1rem;">
-      "Señor Jesús, te pedimos por cada miembro de nuestra comunidad JUMI. Bendice nuestros esfuerzos por crecer en santidad, fortalece nuestros lazos de amistad y guíanos en el servicio a los demás. Que María, nuestra Madre, nos acompañe siempre en este camino de fe. Amén."
-    </p>
-
-    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
-      <button onclick="compartirOracion()" style="background-color: var(--primary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
-        <i class="fas fa-share-alt"></i> Compartir
-      </button>
-      <button onclick="guardarOracion()" style="background-color: var(--accent); color: var(--dark); border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
-        <i class="fas fa-bookmark"></i> Guardar
-      </button>
-    </div>
-  </div>
-</section>
-
-<script>
-  function compartirOracion() {
-    const texto = document.getElementById('oracion-text').innerText;
-    const titulo = "Oración Comunitaria - JUMI";
-
-    if (navigator.share) {
-      navigator.share({
-        title: titulo,
-        text: texto
-      }).catch(error => console.log('Error al compartir:', error));
-    } else {
-      alert("La función de compartir no está disponible en este navegador.");
-    }
-  }
-
-  function guardarOracion() {
-    const texto = document.getElementById('oracion-text').innerText;
-    const blob = new Blob([texto], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-
-    const enlace = document.createElement('a');
-    enlace.href = url;
-    enlace.download = 'oracion_comunitaria.txt';
-    document.body.appendChild(enlace);
-    enlace.click();
-    document.body.removeChild(enlace);
-    URL.revokeObjectURL(url);
-  }
-</script>
-
+      <section class="section" style="text-align: center;">
+        <h2><i class="fas fa-praying-hands"></i> Oración Comunitaria</h2>
+        <p style="max-width: 800px; margin: 0 auto 1.5rem;">"La oración es el oxígeno del alma" - San Pío de Pietrelcina</p>
+      
+        <div id="oracion-box" style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: var(--shadow);">
+          <h3 style="color: var(--primary); margin-bottom: 1rem;">Oración por las necesidades del grupo</h3>
+          <p id="oracion-text" style="font-style: italic; margin-bottom: 1rem;">
+            "Señor Jesús, te pedimos por cada miembro de nuestra comunidad JUMI. Bendice nuestros esfuerzos por crecer en santidad, fortalece nuestros lazos de amistad y guíanos en el servicio a los demás. Que María, nuestra Madre, nos acompañe siempre en este camino de fe. Amén."
+          </p>
+      
+          <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+            <button onclick="compartirOracion()" style="background-color: var(--primary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
+              <i class="fas fa-share-alt"></i> Compartir
+            </button>
+            <button onclick="guardarOracion()" style="background-color: var(--accent); color: var(--dark); border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
+              <i class="fas fa-bookmark"></i> Guardar
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        function compartirOracion() {
+          const texto = document.getElementById('oracion-text').innerText;
+          const titulo = "Oración Comunitaria - JUMI";
+      
+          if (navigator.share) {
+            navigator.share({
+              title: titulo,
+              text: texto
+            }).catch(error => console.log('Error al compartir:', error));
+          } else {
+            alert("La función de compartir no está disponible en este navegador.");
+          }
+        }
+      
+        function guardarOracion() {
+          const texto = document.getElementById('oracion-text').innerText;
+          const blob = new Blob([texto], { type: 'text/plain' });
+          const url = URL.createObjectURL(blob);
+      
+          const enlace = document.createElement('a');
+          enlace.href = url;
+          enlace.download = 'oracion_comunitaria.txt';
+          document.body.appendChild(enlace);
+          enlace.click();
+          document.body.removeChild(enlace);
+          URL.revokeObjectURL(url);
+        }
+      </script>
+      
+  
       <section class="section" style="text-align: center;">
         <h2><i class="fas fa-hands-helping"></i> Únete a Nuestra Comunidad</h2>
         <p>Sigue nuestras redes sociales y mantente conectado con JUMI</p>
@@ -294,19 +295,4 @@
       <script src="jumi.js"></script>
     
   
-      <script>
       
-        function descargarBiblia() {
-          const url = '.pdf'; 
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = 'Biblia_Reina_Valera.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        }
-  
-        // Mostrar el versículo del día
-        $(document).ready(function() {
-          $('#versiculo-del-dia').load('versiculo.php');
-        }); 
