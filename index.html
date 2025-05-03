@@ -3,228 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jumi - Grupo Católico</title>
-  <link rel="stylesheet" href="jumi.css" />
-</head>
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="CRUZ.png" alt="Cruz" class="cruz-icon">
-      <h1>Bienvenido a Jumi</h1>
-      <p>Un espacio para encontrar paz, amor y unidad en Dios.</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Sobre Nosotros</a></li>
-      <li><a href="#informacion">Información</a></li>
-      <li><a href="#miembros">Miembros</a></li>
-      <li><a href="#ubicacion">Ubicación</a></li>
-    </ul>
-
-    <div id="versiculo-del-dia" style="text-align:center; font-size:1.2rem; padding:20px;"></div>
-  </nav>
-
-  <main>
-    <section id="inicio" class="seccion">
-      <h2>Inicio</h2>
-      <p>Bienvenido al sitio oficial de Jumi. Un espacio para crecer en la fe y compartir con otros jóvenes. Únete a nuestro grupo de WhatsApp y sé parte de este maravilloso grupo.</p>
-    </section>
-
-    <section id="nosotros" class="seccion">
-      <h2>Sobre Nosotros</h2>
-      <p>Bienvenid@s, La JUMI es un grupo católico para enseñar sobre Dios. Todos los jóvenes que se quieran unir al grupo JUMI son bienvenidos.</p>
-    </section>
-
-    <section id="informacion" class="seccion">
-      <h2>Información</h2>
-      <p>Horario: 3pm hasta 5pm | Grupo católico | Edad mínima requerida: 15 años</p>
-    </section>
-
-    <section id="miembros" class="seccion">
-      <h2>Miembros de JUMI</h2>
-      <ul class="members-list">
-        <li>Steven</li><li>Daniel</li><li>Oscar</li><li>Kenia</li><li>Valentin</li>
-        <li>Rudy</li><li>Angel</li><li>Kevin</li><li>Natalia</li><li>Jaime</li>
-        <li>Marvin</li><li>Gissela</li><li>Michael</li><li>Franklin</li>
-        <li>Mauricio</li><li>Katty</li><li>Jasmin</li>
-      </ul>
-    </section>
-
-    <section id="ver-album" class="seccion">
-      <div class="center-btn">
-        <button onclick="mostrarAlbum()" class="album-btn">Ver Álbum</button>
+  <title>JUMI - Grupo Juvenil Católico</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="jumi.css">
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <img src="CRUZ.png" alt="Cruz" class="cruz-icon">
+          <h1>JUMI</h1>
+          <p class="header-subtitle">Grupo Juvenil Católico - Encuentra paz, amor y unidad en Cristo</p>
+        </div>
       </div>
-    </section>
-
-    <section id="album" class="seccion" style="display: none;">
-      <h2>JUMI Álbum</h2>
-      <div class="gallery">
-        <div class="image-container"><img src="JUMI.jpg" alt="Imagen 1"></div>
-        <div class="image-container"><img src="JUIMI1.jpg" alt="Imagen 2"></div>
-        <div class="image-container"><img src="jumi2.jpg" alt="Imagen 3"></div>
+    </header>
+  
+    <nav class="main-nav">
+      <div class="nav-container">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="#nosotros"><i class="fas fa-users"></i> Sobre Nosotros</a></li>
+          <li><a href="#informacion"><i class="fas fa-info-circle"></i> Información</a></li>
+          <li><a href="#miembros"><i class="fas fa-user-friends"></i> Miembros</a></li>
+          <li><a href="#album"><i class="fas fa-images"></i> Álbum</a></li>
+          <li><a href="#eventos"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+          <li><a href="#ubicacion"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
+        </ul>
       </div>
-    </section>
+      
+    </nav>
+    <div id="versiculo-del-dia"></div>
+    <main>
+      <section id="inicio" class="section">
+        <h2><i class="fas fa-cross"></i> Bienvenidos a JUMI</h2>
+        <p>JUMI es un espacio creado para jóvenes que buscan crecer en su fe católica, compartir experiencias y formar una comunidad basada en los valores cristianos. Aquí encontrarás un ambiente de amor, respeto y fraternidad donde podrás desarrollar tu espiritualidad.</p>
+        <p>Nuestro objetivo es fortalecer la relación con Dios a través de la oración, el estudio de la Biblia y el servicio comunitario. Te invitamos a unirte a nuestras actividades y ser parte de esta maravillosa familia espiritual.</p>
+        
+        <div class="btn-group">
+          <a href="https://whatsapp.com/channel/0029Vb5M9qLAu3aRABUHvq3q" class="btn btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Unirse al Canal
+          </a>
+        </div>
+      </section>
+  
+      <section id="nosotros" class="section">
+        <h2><i class="fas fa-church"></i> Sobre Nosotros</h2>
+        <p>JUMI (Juventud Unida en María Inmaculada) es un grupo católico juvenil dedicado a la formación espiritual de sus miembros. Nuestro nombre refleja nuestra devoción a la Virgen María y nuestro compromiso con la unidad en Cristo.</p>
+        <p>Fundado en 2015 nuestro grupo ha crecido gracias al trabajo comprometido de jóvenes que comparten el deseo de profundizar en su fe y servir a la comunidad. Organizamos retiros espirituales, charlas formativas, actividades recreativas y proyectos de servicio social.</p>
+        <p>Nuestro lema es "Juventud Misionera, Mas Alla De Las Fronteras", y bajo esta premisa buscamos crear un espacio inclusivo donde todos los jóvenes, sin importar su nivel de conocimiento religioso, puedan sentirse acogidos y acompañados en su camino de fe.</p>
+      </section>
+  
+      <section id="informacion" class="section">
+        <h2><i class="fas fa-info-circle"></i> Información</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> Horario</h3>
+            <p>Reuniones semanales: Domingo de 3:00 PM a 5:00 PM</p>
+            <p>Misas especiales: Domingos 10:00 AM</p>
+          </div>
+          
+          <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fas fa-user-plus"></i> Requisitos</h3>
+            <p>Edad mínima: 15 años</p>
+            <p>Deseo de crecer espiritualmente</p>
+            <p>Compromiso con los valores cristianos</p>
+          </div>
+          
+          <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fas fa-calendar-check"></i> Actividades</h3>
+            <p>Oración comunitaria</p>
+            <p>Estudio bíblico</p>
+            <p>Servicio comunitario</p>
+            <p>Retiros espirituales</p>
+            <p>Visitas a enfermos</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="miembros" class="section">
+        <h2><i class="fas fa-users"></i> Nuestros Miembros</h2>
+        <p>Conoce a los jóvenes que forman parte de nuestra comunidad JUMI. Juntos trabajamos para crecer en fe y servir a los demás.</p>
+        
+        <ul class="members-list">
+          <li>Steven</li>
+          <li>Daniel</li>
+          <li>Oscar</li>
+          <li>Kenia</li>
+          <li>Valentin</li>
+          <li>Rudy</li>
+          <li>Angel</li>
+          <li>Kevin</li>
+          <li>Natalia</li>
+          <li>Jaime</li>
+          <li>Marvin</li>
+          <li>Gissela</li>
+          <li>Michael</li>
+          <li>Franklin</li>
+          <li>Mauricio</li>
+          <li>Katty</li>
+          <li>Jasmin</li>
+        </ul>
+        
+        <p style="margin-top: 1.5rem; font-style: italic;">"Porque donde dos o tres se reúnen en mi nombre, allí estoy yo en medio de ellos." - Mateo 18:20</p>
+      </section>
+  
+      <section id="album" class="section">
+        <h2><i class="fas fa-camera-retro"></i> Álbum Fotográfico</h2>
+        <p>Revive los momentos especiales que hemos compartido como comunidad JUMI. Cada foto cuenta una historia de fe, amistad y crecimiento espiritual.</p>
+        
+        <div class="gallery">
+          <div class="image-container">
+            <img src="JUMI.jpg" alt="Futbol,Playa">
+          </div>
+          <div class="image-container">
+            <img src="JUIMI1.jpg" alt="Grupo Jumi">
+          </div>
+          <div class="image-container">
+            <img src="jumi2.jpg" alt="Rudy xD">
+          </div>
+        
+          </div>
+        </div>
+      </section>
+  
+      <section id="eventos" class="section">
+        <h2><i class="fas fa-calendar-alt"></i> Próximos Eventos</h2>
+        <p>Mantente informado sobre nuestras próximas actividades. ¡Te esperamos con alegría!</p>
+        
+        <ul id="lista-eventos" style="margin-top: 1.5rem; list-style: none;"></ul>
+        
+        <div class="calendar-container">
+          <iframe 
+            src="https://calendar.google.com/calendar/embed?src=8bf36b5b88e056fd52aee2ee97d1503b2d1fda335e319581bfd7ffecfca1b426%40group.calendar.google.com&ctz=America%2FEl_Salvador"
+            frameborder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
+      </section>
+  
+      <section id="ubicacion" class="section">
+        <h2><i class="fas fa-map-marked-alt"></i> Ubicación</h2>
+        <p>Nuestras reuniones se llevan a cabo en la Iglesia Católica de la Colonia San Francisco Guajoyo. ¡Ven y únete a nosotros!</p>
+        
+        <div style="margin-top: 2rem; height: 400px; background-color: #f8f9fa; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow);">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1112.942089206076!2d-89.49579477420927!3d14.223367625790239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62f99c6fdfcd11%3A0x7e6c2b43ea8762c3!2sIglesia%20Cat%C3%B3lica%20Colonia%20San%20Francisco%20Guajoyo!5e0!3m2!1ses-419!2ssv!4v1746293380732!5m2!1ses-419!2ssv" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="https://www.google.com/maps/place/Iglesia+Cat%C3%B3lica+Colonia+San+Francisco+Guajoyo/@14.223574,-89.496446,18.29z/data=!4m6!3m5!1s0x8f62f99c6fdfcd11:0x7e6c2b43ea8762c3!8m2!3d14.2230236!4d-89.4947587!16s%2Fg%2F11rfbz136q?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" class="btn btn-primary" target="_blank">
+            <i class="fas fa-directions"></i> Cómo llegar
+          </a>
+        </div>
+      </section>
+  
+      <section class="download-section section">
+        <h2><i class="fas fa-bible"></i> Recursos Espirituales</h2>
+        <p>Descarga la Biblia y otros materiales para tu crecimiento espiritual</p>
+        
+        <div class="download-card">
+          <h3>Santa Biblia - Versión Reina Valera</h3>
+          <p>Texto completo de la Biblia en formato PDF para tu estudio personal</p>
+          
+          <button onclick="window.open('https://www.bible.com/es/versions/149-rvr1960-biblia-reina-valera-1960', '_blank')" style="background-color: var(--primary); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow);">
+            <i class="fas fa-book"></i> Leer Santa Biblia
+          </button>
+          
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+          <div style="background-color: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; backdrop-filter: blur(5px);">
+            <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-mobile-alt"></i> App Santa Biblia</h3>
+            <p style="margin-bottom: 1rem;">Lleva la Santa Biblia siempre contigo en tu dispositivo móvil</p>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+              <!-- Redirigir al enlace directo de la app si está instalada -->
+              <a href="https://apps.apple.com/us/app/bible/id282935706" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #000; color: white; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none;">
+                <i class="fab fa-apple"></i> App Store
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #488aec; color: white; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none;">
+                <i class="fab fa-google-play"></i> Play Store
+              </a>
+            </div>
+          </div>
+          
+          <div style="background-color: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; backdrop-filter: blur(5px);">
+            <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-book-open"></i> Catecismo</h3>
+            <p style="margin-bottom: 1rem;">Documento completo del Catecismo de la Iglesia Católica</p>
+            <button onclick="window.open('https://www.vatican.va/archive/catechism_sp/index_sp.html', '_blank')" style="background-color: var(--accent); color: var(--dark); border: none; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: 600; cursor: pointer; width: 100%;">
+              <i class="fas fa-download"></i> Leer
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" style="text-align: center;">
+        <h2><i class="fas fa-praying-hands"></i> Oración Comunitaria</h2>
+        <p style="max-width: 800px; margin: 0 auto 1.5rem;">"La oración es el oxígeno del alma" - San Pío de Pietrelcina</p>
+        
+        <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: var(--shadow);">
+          <h3 style="color: var(--primary); margin-bottom: 1rem;">Oración por las necesidades del grupo</h3>
+          <p style="font-style: italic; margin-bottom: 1rem;">"Señor Jesús, te pedimos por cada miembro de nuestra comunidad JUMI. Bendice nuestros esfuerzos por crecer en santidad, fortalece nuestros lazos de amistad y guíanos en el servicio a los demás. Que María, nuestra Madre, nos acompañe siempre en este camino de fe. Amén."</p>
+          
+          <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+            <button style="background-color: var(--primary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
+              <i class="fas fa-share-alt"></i> Compartir
+            </button>
+            <button style="background-color: var(--accent); color: var(--dark); border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer;">
+              <i class="fas fa-bookmark"></i> Guardar
+            </button>
+          </div>
+        </div>
+      </section>
+  
+      <section class="section" style="text-align: center;">
+        <h2><i class="fas fa-hands-helping"></i> Únete a Nuestra Comunidad</h2>
+        <p>Sigue nuestras redes sociales y mantente conectado con JUMI</p>
+        
+        <div class="btn-group">
+          <a href="https://www.instagram.com/angelxszgigi/" class="btn btn-secondary" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram Personal
+          </a>
+          <a href="https://www.instagram.com/jumi_medalla.milagrosa?igsh=MXVsdmV0ZTR2bW40ZA==" class="btn btn-secondary" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram JUMI
+          </a>
+          <a href="https://whatsapp.com/channel/0029Vb5M9qLAu3aRABUHvq3q" class="btn btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Canal WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://www.instagram.com/jumi_medalla.milagrosa?igsh=MXVsdmV0ZTR2bW40ZA==" target="_blank"><i class="fab fa-instagram"></i></a>
 
-    <section id="eventos" class="seccion">
-  <h2>📅 Próximos eventos de JUMI (Añadido Lun/21/abr)</h2>
-  <ul id="lista-eventos" class="event-list" style="font-size: 1.1rem; line-height: 1.6;"></ul>
-</section>
-  <iframe 
-    src="https://calendar.google.com/calendar/embed?src=8bf36b5b88e056fd52aee2ee97d1503b2d1fda335e319581bfd7ffecfca1b426%40group.calendar.google.com&ctz=America%2FEl_Salvador"
-    style="border: 0; width: 100%; height: 600px;" 
-    frameborder="0" 
-    scrolling="no">
-  </iframe>
-</section>
-
-<script>
-  const calendarId = "8bf36b5b88e056fd52aee2ee97d1503b2d1fda335e319581bfd7ffecfca1b426@group.calendar.google.com";
-  const apiKey = "AIzaSyAjVLBN0XDvQcqQf9RMvkO9hbqgsgW0nqo";
-  const maxResults = 5; // Cambia si quieres más o menos eventos
-
-  async function cargarEventos() {
-    const timeMin = new Date().toISOString();
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${apiKey}&timeMin=${timeMin}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const lista = document.getElementById("lista-eventos");
-
-      if (!data.items || data.items.length === 0) {
-        lista.innerHTML = "<li>No hay eventos próximos.</li>";
-        return;
-      }
-
-      lista.innerHTML = ""; // Limpiar lista anterior
-
-      data.items.forEach(evento => {
-        const fecha = new Date(evento.start.dateTime || evento.start.date);
-        const opciones = { weekday: "long", day: "numeric", month: "long" };
-        const fechaTexto = fecha.toLocaleDateString("es-ES", opciones);
-        const li = document.createElement("li");
-        li.innerHTML = `📌 <strong>${fechaTexto}:</strong> ${evento.summary || "Sin título"}`;
-        lista.appendChild(li);
-      });
-
-    } catch (error) {
-      console.error("Error al cargar eventos del calendario:", error);
-      document.getElementById("lista-eventos").innerHTML = "<li>Hubo un problema al cargar los eventos.</li>";
-    }
-  }
-
-  cargarEventos();
-</script>
-
-
-    <section id="ubicacion" class="seccion">
-      <h2>Ubicación</h2>
-      <p>
-        <a href="https://www.google.com/maps/place/Iglesia+Católica+Colonia+San+Francisco+Guajoyo/" target="_blank" class="ubicacion-link">Ver en Google Maps</a>
-      </p>
-    </section>
-
-    <section id="unirse" class="seccion btn-group">
-      <a href="https://whatsapp.com/channel/0029Vb5M9qLAu3aRABUHvq3q" class="whatsapp-btn" target="_blank">
-        <img src="paloma.png" alt="Paloma" class="icono-btn"> Unirse al Canal 
-      </a>
-
-      <a href="https://www.instagram.com/angelxszgigi/" class="instagram-btn" target="_blank">
-        <img src="insta.svg" alt="Instagram" class="icono-btn"> Instagram 
-      </a>
-
-      <a href="https://www.instagram.com/jumi_medalla.milagrosa?igsh=MXVsdmV0ZTR2bW40ZA==" class="instagram-btn" target="_blank">
-        <img src="insta.svg" alt="Instagram" class="icono-btn"> Instagram 
-      </a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 JUMI | Hecha con fe por Angel, un nuevo avance en la JUMI.</p>
-  </footer>
-
-  <!-- Versículo y Álbum -->
-  <script>
-    const versiculos = [    "Juan 3:16 - Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito...",
-    "Salmos 23:1 - El Señor es mi pastor, nada me faltará.",
-    "Filipenses 4:13 - Todo lo puedo en Cristo que me fortalece.",
-    "Jeremías 29:11 - Porque yo sé los planes que tengo para ustedes, declara el Señor...",
-    "Isaías 41:10 - No temas, porque yo estoy contigo...",
-    "Proverbios 3:5 - Confía en el Señor con todo tu corazón...",
-    "Mateo 5:14 - Vosotros sois la luz del mundo...",
-    "Romanos 8:28 - Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien.",
-    "Salmos 46:1 - Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones.",
-    "Isaías 40:31 - Pero los que esperan a Jehová tendrán nuevas fuerzas...",
-    "Mateo 6:33 - Mas buscad primeramente el reino de Dios y su justicia...",
-    "Salmos 119:105 - Lámpara es a mis pies tu palabra, y lumbrera a mi camino.",
-    "Josué 1:9 - Sé fuerte y valiente. No temas ni te desalientes...",
-    "Hebreos 11:1 - La fe es la certeza de lo que se espera...",
-    "1 Corintios 13:13 - Y ahora permanecen la fe, la esperanza y el amor...",
-    "Efesios 6:11 - Vestíos de toda la armadura de Dios...",
-    "Mateo 11:28 - Venid a mí todos los que estáis trabajados y cargados...",
-    "2 Timoteo 1:7 - Porque no nos ha dado Dios espíritu de cobardía...",
-    "Salmos 37:4 - Deléitate asimismo en Jehová, y él te concederá las peticiones de tu corazón.",
-    "Romanos 12:2 - No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento...",
-    "1 Pedro 5:7 - Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.",
-    "Gálatas 5:22 - Mas el fruto del Espíritu es amor, gozo, paz...",
-    "Colosenses 3:23 - Y todo lo que hagáis, hacedlo de corazón, como para el Señor...",
-    "Santiago 1:5 - Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios...",
-    "Salmos 34:8 - Gustad, y ved que es bueno Jehová...",
-    "Apocalipsis 3:20 - He aquí, yo estoy a la puerta y llamo...",
-    "Juan 14:6 - Yo soy el camino, la verdad y la vida...",
-    "Salmos 27:1 - Jehová es mi luz y mi salvación, ¿de quién temeré?",
-    "Mateo 5:9 - Bienaventurados los pacificadores, porque ellos serán llamados hijos de Dios.",
-    "Romanos 10:9 - Que si confesares con tu boca que Jesús es el Señor...",
-    "Salmos 51:10 - Crea en mí, oh Dios, un corazón limpio...",
-    "1 Juan 4:19 - Nosotros le amamos a él, porque él nos amó primero.",
-    "Proverbios 18:10 - Torre fuerte es el nombre de Jehová...",
-    "Isaías 26:3 - Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera...",
-    "Lucas 1:37 - Porque nada hay imposible para Dios.",
-    "Romanos 6:23 - Porque la paga del pecado es muerte...",
-    "Salmos 121:1-2 - Alzaré mis ojos a los montes...",
-    "Hechos 4:12 - Y en ningún otro hay salvación...",
-    "Sofonías 3:17 - Jehová está en medio de ti, poderoso...",
-    "Éxodo 14:14 - Jehová peleará por vosotros, y vosotros estaréis tranquilos.",
-    "Juan 8:12 - Yo soy la luz del mundo...",
-    "Isaías 43:2 - Cuando pases por las aguas, yo estaré contigo...",
-    "Proverbios 16:3 - Encomienda a Jehová tus obras...",
-    "2 Corintios 5:7 - Porque por fe andamos, no por vista.",
-    "Salmos 19:14 - Sean gratos los dichos de mi boca...",
-    "1 Corintios 10:13 - No os ha sobrevenido ninguna tentación que no sea humana...",
-    "Deuteronomio 31:6 - Esforzaos y cobrad ánimo...",
-    "Romanos 5:8 - Mas Dios muestra su amor para con nosotros...",
-    "Hebreos 13:8 - Jesucristo es el mismo ayer, hoy y por los siglos.",
-    "1 Tesalonicenses 5:16-18 - Estad siempre gozosos. Orad sin cesar...",
-    "Isaías 55:8-9 - Porque mis pensamientos no son vuestros pensamientos...",
-    "Salmos 100:5 - Porque Jehová es bueno; para siempre es su misericordia...",
-    "Juan 15:13 - Nadie tiene mayor amor que este...",
-    "Proverbios 4:23 - Sobre toda cosa guardada, guarda tu corazón...",
-    "Hebreos 4:12 - Porque la palabra de Dios es viva y eficaz...",
-    "Miqueas 6:8 - ¿Qué pide Jehová de ti? Solamente hacer justicia...",
-    "Salmos 30:5 - Por la noche durará el lloro, y a la mañana vendrá la alegría.",
-    "Romanos 8:38-39 - Nada nos podrá separar del amor de Dios...",
-    "Mateo 28:19 - Id, y haced discípulos a todas las naciones...",
-    "Juan 1:5 - La luz en las tinieblas resplandece...",
-    "Salmos 91:1 - El que habita al abrigo del Altísimo...",
-    "Isaías 40:8 - Sécase la hierba, marchítase la flor...",
-    "1 Juan 1:9 - Si confesamos nuestros pecados...",
-    "Mateo 22:37 - Amarás al Señor tu Dios con todo tu corazón..."];
-
-    function obtenerVersiculoDelDia() {
-      const hoy = new Date();
-      const diaDelAño = Math.floor((hoy - new Date(hoy.getFullYear(), 0, 0)) / 86400000);
-      return versiculos[diaDelAño % versiculos.length];
-    }
-
-    document.getElementById("versiculo-del-dia").textContent = obtenerVersiculoDelDia();
-
-    function mostrarAlbum() {
-      document.getElementById('album').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
+          <a href="https://whatsapp.com/channel/0029Vb5M9qLAu3aRABUHvq3q" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:orgjumi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2025 JUMI - Juventud Unida en María Inmaculada</p>
+        <p class="copyright">Desarrollado con amor por Angel para la comunidad JUMI</p>
+      </div>
+    </footer>
+  
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  
+      <script src="jumi.js"></script>
+    
+  
+      <script>
+      
+        function descargarBiblia() {
+          const url = '.pdf'; 
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'Biblia_Reina_Valera.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+  
+        // Mostrar el versículo del día
+        $(document).ready(function() {
+          $('#versiculo-del-dia').load('versiculo.php');
+        }); 
