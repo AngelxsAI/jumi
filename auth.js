@@ -1,9 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_KEY
-)
+const SUPABASE_URL = 'https://ybavfkpyrvxjvayxsczl.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InliYXZma3B5cnZ4anZheXhzY3psIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2MTg4MzMsImV4cCI6MjA2NDE5NDgzM30.KRypbVOEtLVLcahQOc37XL-ddLpgMjQQhNSKdvFL7c8';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
