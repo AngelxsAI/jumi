@@ -38,3 +38,9 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     window.location.href = redirectUrl;
   }
 });
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+export const supabase = createClient(
+  'https://ybavfkpyrvxjvayxsczl.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InliYXZma3B5cnZ4anZheXhzY3psIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2MTg4MzMsImV4cCI6MjA2NDE5NDgzM30.KRypbVOEtLVLcahQOc37XL-ddLpgMjQQhNSKdvFL7c8'
+);
