@@ -1,4 +1,4 @@
-import { supabase } from './auth.js';
+import { supabase } from 'auth.js';
 
 document.getElementById('subirBtn').addEventListener('click', async () => {
   const { data: sessionData } = await supabase.auth.getSession();
