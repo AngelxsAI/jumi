@@ -1,4 +1,5 @@
-import { supabase } from 'auth.js';
+// galeria.js
+import { supabase } from './supabaseClient.js';
 
 document.getElementById('subirBtn').addEventListener('click', async () => {
   const { data: sessionData } = await supabase.auth.getSession();
@@ -6,20 +7,15 @@ document.getElementById('subirBtn').addEventListener('click', async () => {
 
   if (!user) return alert("Debes iniciar sesión");
 
-  const fileInput = document.getElementById('fotoInput');
-  const file = fileInput.files[0];
+  const file = document.getElementById('fotoInput').files[0];
   if (!file) return alert("Selecciona una imagen");
 
   const path = `${user.id}/${Date.now()}_${file.name}`;
-
   const { error: uploadError } = await supabase.storage
     .from('galeria')
     .upload(path, file);
 
-  if (uploadError) {
-    alert("Error al subir: " + uploadError.message);
-    return;
-  }
+  if (uploadError) return alert("Error al subir: " + uploadError.message);
 
   const publicUrl = `https://ybavfkpyrvxjvayxsczl.supabase.co/storage/v1/object/public/galeria/${path}`;
 
@@ -27,10 +23,7 @@ document.getElementById('subirBtn').addEventListener('click', async () => {
     .from('fotos')
     .insert({ user_id: user.id, url_foto: publicUrl });
 
-  if (dbError) {
-    alert("Error al guardar en la base de datos: " + dbError.message);
-    return;
-  }
+  if (dbError) return alert("Error al guardar en la base de datos: " + dbError.message);
 
   alert("Foto subida correctamente");
   cargarGaleria();
@@ -52,7 +45,7 @@ async function cargarGaleria() {
 
   for (const foto of fotos) {
     const { data: usuario } = await supabase
-      .from('profiles') // o usa auth.getUser() si no tienes tabla profiles
+      .from('profiles')
       .select('email')
       .eq('id', foto.user_id)
       .single();
@@ -60,10 +53,11 @@ async function cargarGaleria() {
     const div = document.createElement('div');
     div.innerHTML = `
       <img src="${foto.url_foto}" width="200"><br>
-      <small>Subido por: ${usuario?.email || 'Usuario desconocido'}</small><br><br>
+      <small>Subido por: ${usuario?.email || 'Desconocido'}</small><br><br>
     `;
     contenedor.appendChild(div);
   }
 }
 
 cargarGaleria();
+
