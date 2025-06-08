@@ -1,1 +1,36 @@
-<h1>Mantenimiento</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JUMI - Login</title>
+ <link rel="stylesheet" href="/auth.css">
+  <script type="module" src="auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Bienvenido a JUMI</h1>
+
+    <div id="auth-forms" class="form-container">
+      <form id="login-form" class="form">
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="login-email" placeholder="Correo electrónico" required />
+        <input type="password" id="login-password" placeholder="Contraseña" required />
+        <button type="submit">Entrar</button>
+      </form>
+
+      <form id="register-form" class="form">
+        <h2>Registrarse</h2>
+        <input type="email" id="register-email" placeholder="Correo electrónico" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+
+    <div id="welcome" class="hidden">
+      <h2>Ya estás autenticado</h2>
+      <button id="logout-btn">Cerrar sesión</button>
+    </div>
+  </div>
+</body>
+</html>
