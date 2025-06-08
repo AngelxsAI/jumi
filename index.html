@@ -4,8 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JUMI - Login</title>
- <link rel="stylesheet" href="/auth.css">
+  <link rel="stylesheet" href="/auth.css">
   <script type="module" src="auth.js"></script>
+
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f7f3f9;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .title {
+      margin-bottom: 25px;
+      color: #5a2a83;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .form-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .form {
+      background: #faf8fd;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 180px;
+      min-width: 180px;
+      box-shadow: 0 2px 8px rgba(90, 42, 131, 0.1);
+    }
+
+    .form h2 {
+      margin-bottom: 15px;
+      font-weight: 600;
+      color: #5a2a83;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #5a2a83;
+      outline: none;
+      background: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #5a2a83;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background: #7a46a3;
+    }
+
+    #welcome.hidden {
+      display: none;
+    }
+
+    #welcome {
+      margin-top: 30px;
+    }
+
+    #welcome h2 {
+      color: #3c1361;
+      margin-bottom: 20px;
+    }
+
+    #logout-btn {
+      background: #c0392b;
+      padding: 12px 25px;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #logout-btn:hover {
+      background: #e74c3c;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
