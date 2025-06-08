@@ -1,181 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login & Registro IA</title>
+  <meta charset="UTF-8">
+  <title>Autenticación Segura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    :root {
-      --bg: linear-gradient(135deg, #1f1c2c, #928dab);
-      --glass: rgba(255, 255, 255, 0.1);
-      --blur: blur(15px);
-      --primary: #8e44ad;
-      --hover: #9b59b6;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
-    }
-    body {
-      background: var(--bg);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-    }
-    .container {
-      background: var(--glass);
-      backdrop-filter: var(--blur);
-      border-radius: 20px;
-      padding: 2rem;
-      width: 90%;
-      max-width: 420px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-    .tabs {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 1rem;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-    .tab.active {
-      background-color: var(--primary);
-    }
-    form {
-      display: none;
-      flex-direction: column;
-      gap: 0.7rem;
-      animation: fade 0.5s ease-in-out;
-    }
-    form.active {
-      display: flex;
-    }
-    input, select {
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.2);
-      color: white;
-    }
-    input::placeholder {
-      color: #ccc;
-    }
-    button {
-      background: var(--primary);
-      border: none;
-      padding: 0.8rem;
-      border-radius: 8px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: var(--hover);
-    }
-
-    .ai-security {
-      margin-top: 1.2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #eee;
-      opacity: 0.8;
-    }
-    .scanner {
-      width: 100%;
-      height: 8px;
-      background: linear-gradient(90deg, transparent, #00ffcc, transparent);
-      background-size: 200% auto;
-      animation: scan 2s linear infinite;
-      border-radius: 4px;
-      margin: 0.5rem 0;
-    }
-
+    body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+    form { background: white; padding: 20px; margin: 10px auto; border-radius: 10px; max-width: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, button { display: block; width: 100%; margin-bottom: 15px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    .ai-security { font-size: 0.9em; color: #555; text-align: center; }
+    .scanner { height: 5px; background: linear-gradient(90deg, #4CAF50, #8BC34A); animation: scan 2s infinite; border-radius: 5px; }
     @keyframes scan {
-      0% {
-        background-position: 200% 0;
-      }
-      100% {
-        background-position: -200% 0;
-      }
-    }
-
-    @keyframes fade {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 1.5rem;
-      }
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="tabs">
-      <div class="tab active" id="loginTab">Iniciar Sesión</div>
-      <div class="tab" id="registerTab">Registrarse</div>
+
+  <form id="login-form" class="active">
+    <h2>Iniciar sesión</h2>
+    <input type="email" placeholder="Correo electrónico" id="login-email" required>
+    <input type="password" placeholder="Contraseña" id="login-password" required>
+    <button type="submit">Entrar</button>
+    <div class="ai-security">🔒 Protección IA activada
+      <div class="scanner"></div>
     </div>
+  </form>
 
-    <form id="loginForm" class="active">
-      <input type="email" placeholder="Correo electrónico" id="loginEmail" required>
-      <input type="password" placeholder="Contraseña" id="loginPassword" required>
-      <button type="submit">Entrar</button>
-      <div class="ai-security">🔒 Protección IA activada
-        <div class="scanner"></div>
-      </div>
-    </form>
-
-    <form id="registerForm">
-      <input type="text" placeholder="Nombre completo" id="name" required>
-      <input type="email" placeholder="Correo electrónico" id="registerEmail" required>
-      <input type="password" placeholder="Contraseña segura" id="registerPassword" required>
-      <input type="date" placeholder="Fecha de nacimiento" id="dob" required>
-      <input type="text" placeholder="País" id="country" required>
-      <input type="tel" placeholder="Teléfono" id="phone">
-      <input type="url" placeholder="URL de tu foto (opcional)" id="photo">
-      <button type="submit">Crear cuenta</button>
-      <div class="ai-security">🛡️ Registro seguro con IA
-        <div class="scanner"></div>
-      </div>
-    </form>
-  </div>
-
-  <script>
-    const loginTab = document.getElementById("loginTab");
-    const registerTab = document.getElementById("registerTab");
-    const loginForm = document.getElementById("loginForm");
-    const registerForm = document.getElementById("registerForm");
-
-    loginTab.onclick = () => {
-      loginTab.classList.add("active");
-      registerTab.classList.remove("active");
-      loginForm.classList.add("active");
-      registerForm.classList.remove("active");
-    };
-
-    registerTab.onclick = () => {
-      registerTab.classList.add("active");
-      loginTab.classList.remove("active");
-      registerForm.classList.add("active");
-      loginForm.classList.remove("active");
-    };
-  </script>
-
+  <form id="register-form">
+    <h2>Registro</h2>
+    <input type="text" placeholder="Nombre completo" id="name" required>
+    <input type="email" placeholder="Correo electrónico" id="register-email" required>
+    <input type="password" placeholder="Contraseña segura" id="register-password" required>
+    <input type="date" placeholder="Fecha de nacimiento" id="dob" required>
+    <input type="text" placeholder="País" id="country" required>
+    <input type="tel" placeholder="Teléfono" id="phone">
+    <input type="url" placeholder="URL de tu foto (opcional)" id="photo">
+    <button type="submit">Crear cuenta</button>
+    <div class="ai-security">🛡️ Registro seguro con IA
+      <div class="scanner"></div>
+    </div>
+  </form>
   <script src="auth.js"></script>
 
 </body>
